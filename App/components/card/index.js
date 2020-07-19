@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, _ScrollView, Text, StyleSheet, Button, Alert, TouchableOpacity } from 'react-native';
-import Colors from '../../colors';
+import Colors from '../../assets/colors';
 
 const Card = (props) => {
     return(

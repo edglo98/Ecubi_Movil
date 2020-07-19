@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet} from 'react-native';
-import iconShop from '../../images/tienda.png'
+import iconShop from '../../assets/images/tienda.png'
 
 const Header = () =>{
     return(
