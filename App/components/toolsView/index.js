@@ -1,13 +1,16 @@
 import React from 'react';
 import {StyleSheet, Image, View, Text} from 'react-native';
 import Colors from '../../assets/colors';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Tools = (props) => {
   return (
     <View style={Styles.container}>
-      <View style={[Styles.backgroundIcon, {backgroundColor: props.color}]}>
+      <TouchableOpacity
+        style={[Styles.backgroundIcon, {backgroundColor: props.color}]}
+        onPress={props.navigation}>
         <Image style={Styles.icon} source={props.img} />
-      </View>
+      </TouchableOpacity>
       <Text style={Styles.toolName}>{props.tool}</Text>
     </View>
   );

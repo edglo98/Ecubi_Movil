@@ -2,7 +2,7 @@
  * @format
  * @flow
  */
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -19,50 +19,58 @@ import Card from '../components/card/index';
 import Icons from '../assets/images/index';
 import Colors from '../assets/colors';
 
-const HomaPage = () => {
-  var negocio = "Edgar's shop"; //Hay que arreglar que las cards se vean mal si el nombre es demasiado largo.
-
-  return (
-    <>
-      <View style={styles.header}>
-        <Header />
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.shopName}>{negocio}</Text>
-        <View style={styles.tools}>
-          <Tools
-            tool="Reportes"
-            img={Icons.IconGraph}
-            color={Colors.Reportes}
-          />
-          <Tools
-            tool="Finanzas"
-            img={Icons.IconMoney}
-            color={Colors.Finanzas}
-          />
-          <Tools
-            tool="Inventario"
-            img={Icons.IconLayers}
-            color={Colors.Inventario}
-          />
-          <Tools
-            tool="Clientes"
-            img={Icons.IconMegaphone}
-            color={Colors.Clientes}
-          />
+export default class HomaPage extends Component {
+  constructor (props){
+    super(props);
+  };
+  render () {
+    let negocio = "Edgar's shop"; //Hay que arreglar que las cards se vean mal si el nombre es demasiado largo.
+    return (
+      <>
+        <View style={styles.header}>
+          <Header />
         </View>
-        <ScrollView horizontal={true} style={styles.scrollView}>
-          <Card shopName={negocio} />
-          <Card shopName={negocio} />
-          <Card shopName={negocio} />
-        </ScrollView>
-        <View style={styles.separator} />
-        <Text style={styles.tittleAction}>Acciones rápidas</Text>
-        <View style={styles.action}></View>
-        <View style={styles.fooder}></View>
-      </View>
-    </>
-  );
+        <View style={styles.body}>
+          <Text style={styles.shopName}>{negocio}</Text>
+          <View style={styles.tools}>
+            <Tools
+              tool="Reportes"
+              img={Icons.IconGraph}
+              color={Colors.Reportes}
+              navigation={() => this.props.navigation.navigate('Inventory')}
+            />
+            <Tools
+              tool="Finanzas"
+              img={Icons.IconMoney}
+              color={Colors.Finanzas}
+              navigation={() => this.props.navigation.navigate('Inventory')}
+            />
+            <Tools
+              tool="Inventario"
+              img={Icons.IconLayers}
+              color={Colors.Inventario}
+              navigation={() => this.props.navigation.navigate('Inventory')}
+            />
+            <Tools
+              tool="Clientes"
+              img={Icons.IconMegaphone}
+              color={Colors.Clientes}
+              navigation={() => this.props.navigation.navigate('Inventory')}
+            />
+          </View>
+          <ScrollView horizontal={true} style={styles.scrollView}>
+            <Card shopName={negocio} />
+            <Card shopName={negocio} />
+            <Card shopName={negocio} />
+          </ScrollView>
+          <View style={styles.separator} />
+          <Text style={styles.tittleAction}>Acciones rápidas</Text>
+          <View style={styles.action}></View>
+          <View style={styles.fooder}></View>
+        </View>
+      </>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
@@ -112,6 +120,4 @@ const styles = StyleSheet.create({
   fooder: {
     flex: 0.2,
   },
-});
-
-export default HomaPage;
+})

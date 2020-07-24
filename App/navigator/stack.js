@@ -22,6 +22,13 @@ function AppStack() {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="Inventory"
+          component={Routes.Inventory}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -9,6 +9,7 @@ import icongraph from './grafico-de-barras.png';
 import iconmegaphone from './megafono.png';
 import iconshop from './tienda.png';
 import iconGoogle from './google.png';
+import back from './back.png';
 
 export default {
   IconLayers: iconlayers,
@@ -17,4 +18,5 @@ export default {
   IconMegaphone: iconmegaphone,
   IconShop: iconshop,
   IconGoogle: iconGoogle,
+  Back: back,
 };
