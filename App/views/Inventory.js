@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native';
+import Colors from '../assets/colors'
+import Icons from '../assets/images/index'
 import HeaderBack from '../components/HeaderBack'
+import ToolTittle from '../components/ToolTittle'
 
 
 export default class Inventory extends Component {
@@ -11,6 +14,7 @@ export default class Inventory extends Component {
         return(
             <View>
                 <HeaderBack perfileImage={"https://avatars0.githubusercontent.com/u/52474257?s=400&u=dfe6025e5d35753fa04e2c7f7bd03898a8d34501&v=4"}/>
+                <ToolTittle IconTool={Icons.IconLayers} Color={Colors.Inventory} ToolTittle="Inventario"/>
             </View>
         )
     }

@@ -5,7 +5,7 @@
 export default {
   Reportes: '#F2DDF0',
   Finanzas: '#CDFFD6',
-  Inventario: '#FFF8C7',
+  Inventory: '#FFF5E3',
   Clientes: '#FFBCBC',
   Grey: '#727272',
   PurpleEcubi: '#906bd6',

@@ -48,7 +48,7 @@ export default class HomaPage extends Component {
             <Tools
               tool="Inventario"
               img={Icons.IconLayers}
-              color={Colors.Inventario}
+              color={Colors.Inventory}
               navigation={() => this.props.navigation.navigate('Inventory')}
             />
             <Tools
