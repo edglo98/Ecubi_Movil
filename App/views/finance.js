@@ -9,11 +9,11 @@ import Icons from '../assets/images/index';
 import HeaderBack from '../components/HeaderBack';
 import ToolTittle from '../components/ToolTittle';
 
-import Inventory_Products from './Inventory_Products';
-import Inventory_Inventory from './Inventory_Inventory';
-import Inventory_Order from './Inventory_Order';
+import Finance_Sales from './finance_Sales';
+import Finance_Buys from './finance_Buys';
+import Finance_expenses from './finance_expenses';
 
-export default class Inventory extends Component {
+export default class Finance extends Component {
   constructor(props) {
     super(props);
   }
@@ -26,8 +26,8 @@ export default class Inventory extends Component {
           }
         />
         <ToolTittle
-          IconTool={Icons.IconLayers}
-          Color={Colors.Inventory}
+          IconTool={Icons.IconMoney}
+          Color={Colors.Finance}
           ToolTittle="Inventario"
         />
         <Tab.Navigator
@@ -43,18 +43,13 @@ export default class Inventory extends Component {
               left: '5%',
             },
           }}>
-          <Tab.Screen name="Productos" component={Inventory_Products} />
-          <Tab.Screen name="Inventario" component={Inventory_Inventory} />
-          <Tab.Screen name="Órdenes de compra" component={Inventory_Order} />
+          <Tab.Screen name="Mis ventas" component={Finance_Sales} />
+          <Tab.Screen name="Compras a proveedor" component={Finance_Buys} />
+          <Tab.Screen name="Gastos" component={Finance_expenses} />
         </Tab.Navigator>
       </>
     );
   }
 }
-const Tab = createMaterialTopTabNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const Tab = createMaterialTopTabNavigator();

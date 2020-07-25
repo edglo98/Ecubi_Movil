@@ -2,7 +2,7 @@
  * @format
  * @flow
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,10 +20,10 @@ import Icons from '../assets/images/index';
 import Colors from '../assets/colors';
 
 export default class HomaPage extends Component {
-  constructor (props){
+  constructor(props) {
     super(props);
-  };
-  render () {
+  }
+  render() {
     let negocio = "Edgar's shop"; //Hay que arreglar que las cards se vean mal si el nombre es demasiado largo.
     return (
       <>
@@ -36,14 +36,14 @@ export default class HomaPage extends Component {
             <Tools
               tool="Reportes"
               img={Icons.IconGraph}
-              color={Colors.Reportes}
+              color={Colors.Reports}
               navigation={() => this.props.navigation.navigate('Inventory')}
             />
             <Tools
               tool="Finanzas"
               img={Icons.IconMoney}
-              color={Colors.Finanzas}
-              navigation={() => this.props.navigation.navigate('Inventory')}
+              color={Colors.Finance}
+              navigation={() => this.props.navigation.navigate('Finance')}
             />
             <Tools
               tool="Inventario"
@@ -54,7 +54,7 @@ export default class HomaPage extends Component {
             <Tools
               tool="Clientes"
               img={Icons.IconMegaphone}
-              color={Colors.Clientes}
+              color={Colors.Clients}
               navigation={() => this.props.navigation.navigate('Inventory')}
             />
           </View>
@@ -71,7 +71,7 @@ export default class HomaPage extends Component {
       </>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
   fooder: {
     flex: 0.2,
   },
-})
+});

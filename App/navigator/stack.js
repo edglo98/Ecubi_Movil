@@ -29,6 +29,13 @@ function AppStack() {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="Finance"
+          component={Routes.Finance}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

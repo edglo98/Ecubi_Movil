@@ -3,10 +3,10 @@
  * @format
  */
 export default {
-  Reportes: '#F2DDF0',
-  Finanzas: '#CDFFD6',
+  Reports: '#F2DDF0',
+  Finance: '#CDFFD6',
   Inventory: '#FFF5E3',
-  Clientes: '#FFBCBC',
+  Clients: '#FFBCBC',
   Grey: '#727272',
   PurpleEcubi: '#906bd6',
   BlueButtons: '#1F7CFF',

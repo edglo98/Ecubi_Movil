@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
     height: 140,
     margin: 5,
     elevation: 15,
-    backgroundColor: '#FFFFFF',
-    borderColor: '#CCCCCC',
+    backgroundColor: Colors.White,
+    borderColor: Colors.Grey,
     padding: 5,
   },
   tittle: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   cardbody_percent_front: {
     borderWidth: 8,
-    borderColor: Colors.Finanzas,
+    borderColor: Colors.Finance,
     width: 90,
     height: 90,
     borderRadius: 45,
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 35,
     borderRadius: 25,
-    backgroundColor: '#63b2e9',
+    backgroundColor: Colors.BlueButtons,
     alignItems: 'center',
     justifyContent: 'center',
   },
