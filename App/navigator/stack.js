@@ -50,6 +50,20 @@ function AppStack() {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="Branch"
+          component={Routes.DealBranch}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="AddBranch"
+          component={Routes.AddBranch}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

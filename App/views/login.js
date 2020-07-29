@@ -23,6 +23,7 @@ export default class Login extends Component {
         </Text>
         <View style={styles.buttons}>
           <ButtonCreateAcount
+            text={"Crear cuenta nueva"}
             navigation={() => this.props.navigation.navigate('Home')}
           />
           <ButtonLogin
