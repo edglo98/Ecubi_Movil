@@ -18,6 +18,7 @@ import Card from '../components/card/index';
 
 import Icons from '../assets/images/index';
 import Colors from '../assets/colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class HomaPage extends Component {
   constructor(props) {
@@ -31,7 +32,12 @@ export default class HomaPage extends Component {
           <Header />
         </View>
         <View style={styles.body}>
-          <Text style={styles.shopName}>{negocio}</Text>
+          <View style={styles.shopName}>
+            <TouchableOpacity style={styles.shopButton} onPress={() => this.props.navigation.navigate('MyDeal')}>
+              <Text style={styles.shopText}>{negocio}</Text>
+              <View style={styles.shopDetails}></View>
+            </TouchableOpacity>
+          </View>
           <View style={styles.tools}>
             <Tools
               tool="Reportes"
@@ -86,8 +92,26 @@ const styles = StyleSheet.create({
   },
   shopName: {
     flex: 0.3,
-    textAlign: 'center',
+    
+  },
+  shopButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  shopText: {
     fontSize: 35,
+  },
+  shopDetails: {
+    width: 15,
+    height: 15,
+    borderBottomColor: Colors.Grey,
+    borderLeftColor: Colors.Grey,
+    borderBottomWidth: 3,
+    borderLeftWidth: 3,
+    borderRadius: 3,
+    transform: [{ rotate: '-45deg'}],
+    margin: 10,
   },
   tools: {
     flex: 0.7,

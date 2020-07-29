@@ -36,6 +36,20 @@ function AppStack() {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="MyDeal"
+          component={Routes.MyDeal}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="DealConfig"
+          component={Routes.DealConfig}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

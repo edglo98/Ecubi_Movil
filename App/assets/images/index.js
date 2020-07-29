@@ -10,6 +10,8 @@ import iconmegaphone from './megafono.png';
 import iconshop from './tienda.png';
 import iconGoogle from './google.png';
 import back from './back.png';
+import Cancel from './cerrar.png';
+import Anadir from './anadir.png';
 
 export default {
   IconLayers: iconlayers,
@@ -19,4 +21,6 @@ export default {
   IconShop: iconshop,
   IconGoogle: iconGoogle,
   Back: back,
+  Cancel,
+  Anadir,
 };
